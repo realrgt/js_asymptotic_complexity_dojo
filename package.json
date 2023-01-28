@@ -1,0 +1,17 @@
+{
+  "name": "codility",
+  "version": "1.0.0",
+  "description": "Deep dive into codility",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/main.js",
+    "dev": "nodemon src/main.js"
+  },
+  "author": "realrgt <ergitorubildo@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sucrase": "^3.29.0"
+  }
+}
