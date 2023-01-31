@@ -1,7 +1,7 @@
 console.log(solution([3, 1, 2, 4, 3]));
 
 function solution(A) {
-  const diffsList = [];
+  let diff = Infinity;
 
   for (let i = 1; i < A.length; i++) {
     const listAtLeft = A.slice(0, i);
@@ -10,10 +10,9 @@ function solution(A) {
     const someLeftList = listAtLeft.reduce((acc, value) => acc + value, 0);
     const someRightList = listAtRight.reduce((acc, value) => acc + value, 0);
 
-    const diffLeftRight = someLeftList - someRightList;
+    const currentDiff = Math.abs(someLeftList - someRightList);
 
-    diffsList.push(Math.abs(diffLeftRight));
+    if (diff > currentDiff) diff = currentDiff;
   }
-
-  return Math.min(...diffsList);
+  return diff;
 }
